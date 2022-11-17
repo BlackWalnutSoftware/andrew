@@ -125,7 +125,13 @@
   - check for old namespace references and address
   - update GitHub Desktop to use new account and name (Snow Elf)
   - use new email address
-  
+  - promote v1 of KGraph (private)
+    - set license
+  - promote v1 of Andrew (private)
+    - set license
+    - add paper to site
+	
+	
 ##########################################################
 # WIP
 ##########################################################
@@ -136,20 +142,17 @@
 # backlog
 ##########################################################
 
-* fix TPS defect. (note: temp fix of dep override in POM is in place)
-  see: https://security.snyk.io/vuln/SNYK-JAVA-COMFASTERXMLJACKSONCORE-3038426
-  - Change a direct dep to a new non-RC version
-  - remove the temp fix
   
   
-  - promote v1 of KGraph (private)
-    - set license
-  - promote v1 of Andrew (private)
-    - set license
-    - add paper to site
-  - make projects public
 
-* publish paper to reddit r/
+* make projects public
+
+* publish paper to reddit r/genetic_algorithms
+  - create BWS reddit account
+  - confirm r/genetic_algorithms as where to post
+  - draft mail
+  - post
+  - gauge response
 
 
 * thought modeling: diagram -> test file (json? XML? SysML?) -> kgraph
@@ -158,6 +161,12 @@
   - https://www.yworks.com/products/yed ?
   - https://www.graphity.com/ ?
 
+
+* fix TPS defect. (note: temp fix of dep override in POM is in place)
+  see: https://security.snyk.io/vuln/SNYK-JAVA-COMFASTERXMLJACKSONCORE-3038426
+  - Change a direct dep to a new non-RC version
+  - remove the temp fix
+  
 * make it run faster
   - change the n^2 loops in Evaluator.evaluateThoughts2 to be parallel threads with a thread pool. (Fast!)
   - Also adjust the logging to differentiate threads.
