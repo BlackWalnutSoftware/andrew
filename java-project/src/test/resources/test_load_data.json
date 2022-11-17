@@ -1,0 +1,394 @@
+[ {
+  "properties" : {
+    "name" : "n1",
+    "__type" : "thought"
+  },
+  "type" : "thought",
+  "_id" : "thought/KEY_1657153263052140",
+  "_key" : "KEY_1657153263052140"
+}, {
+  "properties" : {
+    "startingType" : "LinearDatasetNode",
+    "relationType" : "LinearDatasetEdge",
+    "distance" : 10,
+    "resultClass" : "Float",
+    "__type" : "goal",
+    "name" : "goalNode",
+    "targetProperty" : "value",
+    "direction" : "outbound"
+  },
+  "type" : "goal",
+  "_id" : "goal/KEY_1657153262985115",
+  "_key" : "KEY_1657153262985115",
+  "_rev" : "_ebWGDWu---"
+}, {
+  "properties" : {
+    "__type" : "thought_operation",
+    "name" : "n2",
+    "operationName" : "multiply",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "type" : "thought_operation",
+  "_id" : "thought_operation/KEY_1657153263066142",
+  "_key" : "KEY_1657153263066142",
+  "_rev" : "_ebWGDbu---"
+}, {
+  "properties" : {
+    "__type" : "thought_operation",
+    "name" : "n3",
+    "operationName" : "traverse",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "type" : "thought_operation",
+  "_id" : "thought_operation/KEY_1657153263069143",
+  "_key" : "KEY_1657153263069143",
+  "_rev" : "_ebWGDc----"
+}, {
+  "properties" : {
+    "__type" : "thought_operation",
+    "name" : "n4",
+    "operationName" : "subtract",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "type" : "thought_operation",
+  "_id" : "thought_operation/KEY_1657153263073144",
+  "_key" : "KEY_1657153263073144",
+  "_rev" : "_ebWGDcO---"
+}, {
+  "properties" : {
+    "__type" : "thought_operation",
+    "name" : "n6",
+    "operationName" : "multiply",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "type" : "thought_operation",
+  "_id" : "thought_operation/KEY_1657153263077145",
+  "_key" : "KEY_1657153263077145",
+  "_rev" : "_ebWGDca---"
+}, {
+  "properties" : {
+    "operationName" : "average",
+    "thought_key" : "KEY_1657153263052140",
+    "__type" : "thought_operation"
+  },
+  "type" : "thought_operation",
+  "_id" : "thought_operation/KEY_1657153263207165",
+  "_key" : "KEY_1657153263207165",
+  "_rev" : "_ebWGDl----"
+}, {
+  "properties" : {
+    "__type" : "thought_operation",
+    "name" : "n6",
+    "operationName" : "multiply",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "type" : "thought_operation",
+  "_id" : "thought_operation/KEY_1657153263155160",
+  "_key" : "KEY_1657153263155160",
+  "_rev" : "_ebWGDnC---"
+}, {
+  "properties" : {
+    "__type" : "thought_result",
+    "name" : "n5",
+    "operationName" : "end",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "type" : "thought_result",
+  "_id" : "thought_result/KEY_1657153263083146",
+  "_key" : "KEY_1657153263083146",
+  "_rev" : "_ebWGDcu---"
+}, {
+  "properties" : {
+    "__left_collection" : "goal",
+    "__type" : "approach",
+    "__right_collection" : "thought",
+    "name" : "e0",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "rightType" : "thought",
+  "leftType" : "goal",
+  "type" : "approach",
+  "_id" : "approach/KEY_1657153263059141",
+  "_key" : "KEY_1657153263059141",
+  "_rev" : "_ebWGDbW---",
+  "_from" : "goal/KEY_1657153262985115",
+  "_to" : "thought/KEY_1657153263052140"
+}, {
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "description" : "starting node target property value.",
+    "thought_key" : "KEY_1657153263052140",
+    "output" : "floatA",
+    "input" : "targetPropValue",
+    "__left_collection" : "thought",
+    "__type" : "thought_sequence",
+    "mutation_range" : "FLOAT:>0",
+    "name" : "e1"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263090147",
+  "_key" : "KEY_1657153263090147",
+  "_rev" : "_ebWGDdO---",
+  "_from" : "thought/KEY_1657153263052140",
+  "_to" : "thought_operation/KEY_1657153263066142"
+}, {
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "KEY_1657153263052140",
+    "output" : "floatB",
+    "input" : "NUMBER.2",
+    "__left_collection" : "thought",
+    "__type" : "thought_sequence",
+    "mutation_range" : "FLOAT:>0",
+    "name" : "e2"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263094148",
+  "_key" : "KEY_1657153263094148",
+  "_rev" : "_ebWGDde---",
+  "_from" : "thought/KEY_1657153263052140",
+  "_to" : "thought_operation/KEY_1657153263066142"
+}, {
+  "properties" : {
+    "output" : "startingNode",
+    "input" : "startingNode",
+    "__left_collection" : "thought",
+    "__type" : "thought_sequence",
+    "__right_collection" : "thought_operation",
+    "name" : "e3",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263098149",
+  "_key" : "KEY_1657153263098149",
+  "_rev" : "_ebWGDdy---",
+  "_from" : "thought/KEY_1657153263052140",
+  "_to" : "thought_operation/KEY_1657153263069143"
+}, {
+  "properties" : {
+    "output" : "traversalEdgeType",
+    "input" : "relationType",
+    "__left_collection" : "thought",
+    "__type" : "thought_sequence",
+    "__right_collection" : "thought_operation",
+    "name" : "e4",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263102150",
+  "_key" : "KEY_1657153263102150",
+  "_rev" : "_ebWGDeC---",
+  "_from" : "thought/KEY_1657153263052140",
+  "_to" : "thought_operation/KEY_1657153263069143"
+}, {
+  "properties" : {
+    "output" : "direction",
+    "input" : "direction",
+    "__left_collection" : "thought",
+    "__type" : "thought_sequence",
+    "__right_collection" : "thought_operation",
+    "name" : "e5",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263107151",
+  "_key" : "KEY_1657153263107151",
+  "_rev" : "_ebWGDeW---",
+  "_from" : "thought/KEY_1657153263052140",
+  "_to" : "thought_operation/KEY_1657153263069143"
+}, {
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "KEY_1657153263052140",
+    "output" : "floatA",
+    "input" : "distance",
+    "__left_collection" : "thought",
+    "__type" : "thought_sequence",
+    "mutation_range" : "FLOAT:>0",
+    "name" : "e6"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263111152",
+  "_key" : "KEY_1657153263111152",
+  "_rev" : "_ebWGDei---",
+  "_from" : "thought/KEY_1657153263052140",
+  "_to" : "thought_operation/KEY_1657153263077145"
+}, {
+  "properties" : {
+    "output" : "floatA",
+    "input" : "RESULT",
+    "__left_collection" : "thought_operation",
+    "__type" : "thought_sequence",
+    "__right_collection" : "thought_operation",
+    "name" : "e7",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought_operation",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263115153",
+  "_key" : "KEY_1657153263115153",
+  "_rev" : "_ebWGDey---",
+  "_from" : "thought_operation/KEY_1657153263066142",
+  "_to" : "thought_operation/KEY_1657153263073144"
+}, {
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "KEY_1657153263052140",
+    "output" : "floatB",
+    "input" : "RESULT.value",
+    "__left_collection" : "thought_operation",
+    "__type" : "thought_sequence",
+    "mutation_range" : "FLOAT:>0",
+    "name" : "e8"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought_operation",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263119154",
+  "_key" : "KEY_1657153263119154",
+  "_rev" : "_ebWGDfC---",
+  "_from" : "thought_operation/KEY_1657153263069143",
+  "_to" : "thought_operation/KEY_1657153263073144"
+}, {
+  "properties" : {
+    "output" : "floatB",
+    "input" : "NUMBER.-1",
+    "__left_collection" : "thought",
+    "__type" : "thought_sequence",
+    "__right_collection" : "thought_operation",
+    "name" : "e10",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263126156",
+  "_key" : "KEY_1657153263126156",
+  "_rev" : "_ebWGDfi---",
+  "_from" : "thought/KEY_1657153263052140",
+  "_to" : "thought_operation/KEY_1657153263077145"
+}, {
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "KEY_1657153263052140",
+    "output" : "distance",
+    "input" : "RESULT",
+    "__left_collection" : "thought_operation",
+    "__type" : "thought_sequence",
+    "mutation_range" : "FLOAT:>0",
+    "name" : "e11"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought_operation",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263131157",
+  "_key" : "KEY_1657153263131157",
+  "_rev" : "_ebWGDfy---",
+  "_from" : "thought_operation/KEY_1657153263077145",
+  "_to" : "thought_operation/KEY_1657153263069143"
+}, {
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "KEY_1657153263052140",
+    "output" : "input1",
+    "input" : "RESULT",
+    "__left_collection" : "thought_operation",
+    "__type" : "thought_sequence",
+    "mutation_range" : "FLOAT:>0",
+    "name" : "e9"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought_operation",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263123155",
+  "_key" : "KEY_1657153263123155",
+  "_rev" : "_ebWGDlu---",
+  "_from" : "thought_operation/KEY_1657153263073144",
+  "_to" : "thought_operation/KEY_1657153263207165"
+}, {
+  "properties" : {
+    "output" : "input2",
+    "input" : "RESULT",
+    "__left_collection" : "thought_operation",
+    "__type" : "thought_sequence",
+    "__right_collection" : "thought_operation",
+    "name" : "e3",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought_operation",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263175164",
+  "_key" : "KEY_1657153263175164",
+  "_rev" : "_ebWGDmS---",
+  "_from" : "thought_operation/KEY_1657153263155160",
+  "_to" : "thought_operation/KEY_1657153263207165"
+}, {
+  "properties" : {
+    "__right_collection" : "thought_result",
+    "thought_key" : "KEY_1657153263052140",
+    "output" : "output",
+    "input" : "RESULT",
+    "__left_collection" : "thought_operation",
+    "__type" : "thought_sequence",
+    "mutation_range" : "FLOAT:>0",
+    "name" : "e9"
+  },
+  "rightType" : "thought_result",
+  "leftType" : "thought_operation",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263239166",
+  "_key" : "KEY_1657153263239166",
+  "_rev" : "_ebWGDmi---",
+  "_from" : "thought_operation/KEY_1657153263207165",
+  "_to" : "thought_result/KEY_1657153263083146"
+}, {
+  "properties" : {
+    "output" : "floatA",
+    "input" : "targetPropValue",
+    "__left_collection" : "thought",
+    "__type" : "thought_sequence",
+    "__right_collection" : "thought_operation",
+    "name" : "e1",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263168162",
+  "_key" : "KEY_1657153263168162",
+  "_rev" : "_ebWGDni---",
+  "_from" : "thought/KEY_1657153263052140",
+  "_to" : "thought_operation/KEY_1657153263155160"
+}, {
+  "properties" : {
+    "output" : "floatB",
+    "input" : "NUMBER.1.5",
+    "__left_collection" : "thought",
+    "__type" : "thought_sequence",
+    "__right_collection" : "thought_operation",
+    "name" : "e2",
+    "thought_key" : "KEY_1657153263052140"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/KEY_1657153263171163",
+  "_key" : "KEY_1657153263171163",
+  "_rev" : "_ebWGDnu---",
+  "_from" : "thought/KEY_1657153263052140",
+  "_to" : "thought_operation/KEY_1657153263155160"
+} ]

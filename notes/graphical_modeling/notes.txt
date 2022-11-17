@@ -1,0 +1,16 @@
+* https://en.wikipedia.org/wiki/Systems_Modeling_Language
+
+* https://www.modelio.org/downloads/download-modelio.html
+
+* https://github.com/ModelioOpenSource/Modelio
+
+* Parametric Diagrams  https://sparxsystems.com/enterprise_architect_user_guide/15.2/model_domains/parametric_diagrams.html#:~:text=Parametric%20diagrams%20are%20specialized%20Internal,being%20created%20in%20the%20model.
+
+* https://sysml.org/sysml-faq/what-is-block-definition-diagram.html
+
+* modelio flow port ?
+  - "Create a Flow Port through a Modeler pane or an Internal Block Diagram:"
+  - https://www.modelio.org/forum/7-general-help/3136-solved-sysml-item-flows-in-internal-block-diagrams.html ?
+  - https://www.modelio.org/tutorials/how-to-create-sysml-diagrams-in-modelio.html ?
+  
+* Parametric diagrams sysml ?

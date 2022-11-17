@@ -1,0 +1,153 @@
+Initializing root user...Hang on...
+2022-09-09T00:53:43Z [8] INFO [f6e0e] {aql} memory limit per AQL query automatically set to 4759166976 bytes. to modify this value, please adjust the startup option `--query.memory-limit`
+2022-09-09T00:53:43Z [8] INFO [a1c60] {syscall} file-descriptors (nofiles) hard limit is 1048576, soft limit is 1048576
+2022-09-09T00:53:44Z [8] INFO [c1b63] {arangosearch} ArangoSearch maintenance: [1..1] commit thread(s), [1..1] consolidation thread(s)
+2022-09-09T00:53:44Z [8] INFO [7da27] {startup} server will now shut down due to upgrade, database initialization or admin restoration.
+Initializing database...Hang on...
+Database initialized...Starting System...
+2022-09-09T00:53:52Z [1] INFO [e52b0] {general} ArangoDB 3.9.0 [linux] 64bit, using jemalloc, build tags/v3.9.0-0-g8561584e6d5, VPack 0.1.35, RocksDB 6.27.0, ICU 64.2, V8 7.9.317, OpenSSL 1.1.1m  14 Dec 2021
+2022-09-09T00:53:52Z [1] INFO [75ddc] {general} detected operating system: Linux version 5.10.16.3-microsoft-standard-WSL2 (oe-user@oe-host) (x86_64-msft-linux-gcc (GCC) 9.3.0, GNU ld (GNU Binutils) 2.34.0.20200220) #1 SMP Fri Apr 2 22:23:49 UTC 2021
+2022-09-09T00:53:52Z [1] INFO [25362] {memory} Available physical memory: 7931944960 bytes, available cores: 8
+2022-09-09T00:53:52Z [1] WARNING [118b0] {memory} maximum number of memory mappings per process is 65530, which seems too low. it is recommended to set it to at least 512000
+2022-09-09T00:53:52Z [1] WARNING [49528] {memory} execute 'sudo sysctl -w "vm.max_map_count=512000"'
+2022-09-09T00:53:52Z [1] WARNING [e8b68] {memory} /sys/kernel/mm/transparent_hugepage/enabled is set to 'always'. It is recommended to set it to a value of 'never' or 'madvise'
+2022-09-09T00:53:52Z [1] WARNING [f3108] {memory} execute 'sudo bash -c "echo madvise > /sys/kernel/mm/transparent_hugepage/enabled"'
+2022-09-09T00:53:52Z [1] INFO [144fe] {general} using storage engine 'rocksdb'
+2022-09-09T00:53:52Z [1] INFO [3bb7d] {cluster} Starting up with role SINGLE
+2022-09-09T00:53:52Z [1] INFO [f6e0e] {aql} memory limit per AQL query automatically set to 4759166976 bytes. to modify this value, please adjust the startup option `--query.memory-limit`
+2022-09-09T00:53:52Z [1] INFO [a1c60] {syscall} file-descriptors (nofiles) hard limit is 1048576, soft limit is 1048576
+2022-09-09T00:53:53Z [1] INFO [fe333] {engines} RocksDB recovery starting, scanning WAL starting from sequence number 106
+2022-09-09T00:53:53Z [1] INFO [a4ec8] {engines} RocksDB recovery finished, WAL entries scanned: 75, max tick found in WAL: 112, last HLC value: 0
+2022-09-09T00:53:53Z [1] INFO [c1b63] {arangosearch} ArangoSearch maintenance: [1..1] commit thread(s), [1..1] consolidation thread(s)
+2022-09-09T00:53:53Z [1] INFO [6ea38] {general} using endpoint 'http+tcp://0.0.0.0:8529' for non-encrypted requests
+2022-09-09T00:53:54Z [1] INFO [cf3f4] {general} ArangoDB (version 3.9.0 [linux]) is ready for business. Have fun!
+2022-09-09T21:04:14Z [1] INFO [e52b0] {general} ArangoDB 3.9.0 [linux] 64bit, using jemalloc, build tags/v3.9.0-0-g8561584e6d5, VPack 0.1.35, RocksDB 6.27.0, ICU 64.2, V8 7.9.317, OpenSSL 1.1.1m  14 Dec 2021
+2022-09-09T21:04:14Z [1] INFO [75ddc] {general} detected operating system: Linux version 5.10.16.3-microsoft-standard-WSL2 (oe-user@oe-host) (x86_64-msft-linux-gcc (GCC) 9.3.0, GNU ld (GNU Binutils) 2.34.0.20200220) #1 SMP Fri Apr 2 22:23:49 UTC 2021
+2022-09-09T21:04:14Z [1] INFO [25362] {memory} Available physical memory: 7931944960 bytes, available cores: 8
+2022-09-09T21:04:14Z [1] WARNING [118b0] {memory} maximum number of memory mappings per process is 65530, which seems too low. it is recommended to set it to at least 512000
+2022-09-09T21:04:14Z [1] WARNING [49528] {memory} execute 'sudo sysctl -w "vm.max_map_count=512000"'
+2022-09-09T21:04:14Z [1] WARNING [e8b68] {memory} /sys/kernel/mm/transparent_hugepage/enabled is set to 'always'. It is recommended to set it to a value of 'never' or 'madvise'
+2022-09-09T21:04:14Z [1] WARNING [f3108] {memory} execute 'sudo bash -c "echo madvise > /sys/kernel/mm/transparent_hugepage/enabled"'
+2022-09-09T21:04:14Z [1] INFO [144fe] {general} using storage engine 'rocksdb'
+2022-09-09T21:04:14Z [1] INFO [3bb7d] {cluster} Starting up with role SINGLE
+2022-09-09T21:04:14Z [1] INFO [f6e0e] {aql} memory limit per AQL query automatically set to 4759166976 bytes. to modify this value, please adjust the startup option `--query.memory-limit`
+2022-09-09T21:04:14Z [1] INFO [a1c60] {syscall} file-descriptors (nofiles) hard limit is 1048576, soft limit is 1048576
+2022-09-09T21:04:14Z [1] WARNING [ad4b2] {general} found existing lockfile '/var/lib/arangodb3/LOCK' of previous process with pid 1, and that process seems to be still running
+2022-09-09T21:04:14Z [1] INFO [fe333] {engines} RocksDB recovery starting, scanning WAL starting from sequence number 253
+2022-09-09T21:04:14Z [1] INFO [a4ec8] {engines} RocksDB recovery finished, WAL entries scanned: 18, max tick found in WAL: 156, last HLC value: 1743451468252315648
+2022-09-09T21:04:15Z [1] INFO [c1b63] {arangosearch} ArangoSearch maintenance: [1..1] commit thread(s), [1..1] consolidation thread(s)
+2022-09-09T21:04:15Z [1] INFO [6ea38] {general} using endpoint 'http+tcp://0.0.0.0:8529' for non-encrypted requests
+2022-09-09T21:04:15Z [1] INFO [cf3f4] {general} ArangoDB (version 3.9.0 [linux]) is ready for business. Have fun!
+2022-09-09T21:53:40Z [1] INFO [5b708] {engines} last RocksDB WAL sync happened longer ago than configured threshold. last sync happened 13963 ms ago, threshold value: 5000 ms
+2022-09-11T11:10:23Z [1] WARNING [3ad54] {engines} slow background settings sync: 134203.559289 s
+2022-09-11T19:07:00Z [1] WARNING [3ad54] {engines} slow background settings sync: 65524.098973 s
+2022-09-14T01:59:45Z [1] INFO [b4133] {general} SIGTERM received (sender pid 0), beginning shut down sequence
+2022-09-14T01:59:51Z [1] INFO [4bcb9] {general} ArangoDB has been shut down
+2022-09-14T23:35:10Z [1] INFO [e52b0] {general} ArangoDB 3.9.0 [linux] 64bit, using jemalloc, build tags/v3.9.0-0-g8561584e6d5, VPack 0.1.35, RocksDB 6.27.0, ICU 64.2, V8 7.9.317, OpenSSL 1.1.1m  14 Dec 2021
+2022-09-14T23:35:10Z [1] INFO [75ddc] {general} detected operating system: Linux version 5.10.16.3-microsoft-standard-WSL2 (oe-user@oe-host) (x86_64-msft-linux-gcc (GCC) 9.3.0, GNU ld (GNU Binutils) 2.34.0.20200220) #1 SMP Fri Apr 2 22:23:49 UTC 2021
+2022-09-14T23:35:10Z [1] INFO [25362] {memory} Available physical memory: 7931944960 bytes, available cores: 8
+2022-09-14T23:35:10Z [1] WARNING [118b0] {memory} maximum number of memory mappings per process is 65530, which seems too low. it is recommended to set it to at least 512000
+2022-09-14T23:35:10Z [1] WARNING [49528] {memory} execute 'sudo sysctl -w "vm.max_map_count=512000"'
+2022-09-14T23:35:10Z [1] WARNING [e8b68] {memory} /sys/kernel/mm/transparent_hugepage/enabled is set to 'always'. It is recommended to set it to a value of 'never' or 'madvise'
+2022-09-14T23:35:10Z [1] WARNING [f3108] {memory} execute 'sudo bash -c "echo madvise > /sys/kernel/mm/transparent_hugepage/enabled"'
+2022-09-14T23:35:10Z [1] INFO [144fe] {general} using storage engine 'rocksdb'
+2022-09-14T23:35:10Z [1] INFO [3bb7d] {cluster} Starting up with role SINGLE
+2022-09-14T23:35:10Z [1] INFO [f6e0e] {aql} memory limit per AQL query automatically set to 4759166976 bytes. to modify this value, please adjust the startup option `--query.memory-limit`
+2022-09-14T23:35:10Z [1] INFO [a1c60] {syscall} file-descriptors (nofiles) hard limit is 1048576, soft limit is 1048576
+2022-09-14T23:35:11Z [1] INFO [fe333] {engines} RocksDB recovery starting, scanning WAL starting from sequence number 16026143
+2022-09-14T23:35:11Z [1] INFO [a4ec8] {engines} RocksDB recovery finished, WAL entries scanned: 599, max tick found in WAL: 121560, last HLC value: 0
+2022-09-14T23:35:11Z [1] INFO [c1b63] {arangosearch} ArangoSearch maintenance: [1..1] commit thread(s), [1..1] consolidation thread(s)
+2022-09-14T23:35:11Z [1] INFO [6ea38] {general} using endpoint 'http+tcp://0.0.0.0:8529' for non-encrypted requests
+2022-09-14T23:35:12Z [1] INFO [cf3f4] {general} ArangoDB (version 3.9.0 [linux]) is ready for business. Have fun!
+2022-09-15T00:20:28Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/linear_dataset_tests' for database 'linear_dataset_tests'
+2022-09-15T00:20:28Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/linear_dataset_tests_garden' for database 'linear_dataset_tests_garden'
+2022-09-15T00:20:29Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/andrew_test_database_garden' for database 'andrew_test_database_garden'
+2022-09-15T00:20:29Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/andrew_test_database' for database 'andrew_test_database'
+2022-09-15T00:20:45Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/load_performance_tests' for database 'load_performance_tests'
+2022-09-16T20:42:16Z [1] INFO [b4133] {general} SIGTERM received (sender pid 0), beginning shut down sequence
+2022-09-16T20:42:19Z [1] INFO [4bcb9] {general} ArangoDB has been shut down
+2022-09-17T19:14:42Z [1] INFO [e52b0] {general} ArangoDB 3.9.0 [linux] 64bit, using jemalloc, build tags/v3.9.0-0-g8561584e6d5, VPack 0.1.35, RocksDB 6.27.0, ICU 64.2, V8 7.9.317, OpenSSL 1.1.1m  14 Dec 2021
+2022-09-17T19:14:42Z [1] INFO [75ddc] {general} detected operating system: Linux version 5.10.16.3-microsoft-standard-WSL2 (oe-user@oe-host) (x86_64-msft-linux-gcc (GCC) 9.3.0, GNU ld (GNU Binutils) 2.34.0.20200220) #1 SMP Fri Apr 2 22:23:49 UTC 2021
+2022-09-17T19:14:42Z [1] INFO [25362] {memory} Available physical memory: 7931944960 bytes, available cores: 8
+2022-09-17T19:14:42Z [1] WARNING [118b0] {memory} maximum number of memory mappings per process is 65530, which seems too low. it is recommended to set it to at least 512000
+2022-09-17T19:14:42Z [1] WARNING [49528] {memory} execute 'sudo sysctl -w "vm.max_map_count=512000"'
+2022-09-17T19:14:42Z [1] WARNING [e8b68] {memory} /sys/kernel/mm/transparent_hugepage/enabled is set to 'always'. It is recommended to set it to a value of 'never' or 'madvise'
+2022-09-17T19:14:42Z [1] WARNING [f3108] {memory} execute 'sudo bash -c "echo madvise > /sys/kernel/mm/transparent_hugepage/enabled"'
+2022-09-17T19:14:42Z [1] INFO [144fe] {general} using storage engine 'rocksdb'
+2022-09-17T19:14:42Z [1] INFO [3bb7d] {cluster} Starting up with role SINGLE
+2022-09-17T19:14:42Z [1] INFO [f6e0e] {aql} memory limit per AQL query automatically set to 4759166976 bytes. to modify this value, please adjust the startup option `--query.memory-limit`
+2022-09-17T19:14:42Z [1] INFO [a1c60] {syscall} file-descriptors (nofiles) hard limit is 1048576, soft limit is 1048576
+2022-09-17T19:14:43Z [1] INFO [fe333] {engines} RocksDB recovery starting, scanning WAL starting from sequence number 20909999
+2022-09-17T19:14:43Z [1] INFO [a4ec8] {engines} RocksDB recovery finished, WAL entries scanned: 647, max tick found in WAL: 161080, last HLC value: 0
+2022-09-17T19:14:44Z [1] INFO [c1b63] {arangosearch} ArangoSearch maintenance: [1..1] commit thread(s), [1..1] consolidation thread(s)
+2022-09-17T19:14:44Z [1] INFO [6ea38] {general} using endpoint 'http+tcp://0.0.0.0:8529' for non-encrypted requests
+2022-09-17T19:14:44Z [1] INFO [cf3f4] {general} ArangoDB (version 3.9.0 [linux]) is ready for business. Have fun!
+2022-09-17T19:36:48Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/linear_dataset_tests' for database 'linear_dataset_tests'
+2022-09-17T19:36:48Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/linear_dataset_tests_garden' for database 'linear_dataset_tests_garden'
+2022-09-17T19:36:49Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/andrew_test_database_garden' for database 'andrew_test_database_garden'
+2022-09-17T19:36:49Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/andrew_test_database' for database 'andrew_test_database'
+2022-09-18T20:33:35Z [1] INFO [e52b0] {general} ArangoDB 3.9.0 [linux] 64bit, using jemalloc, build tags/v3.9.0-0-g8561584e6d5, VPack 0.1.35, RocksDB 6.27.0, ICU 64.2, V8 7.9.317, OpenSSL 1.1.1m  14 Dec 2021
+2022-09-18T20:33:35Z [1] INFO [75ddc] {general} detected operating system: Linux version 5.10.16.3-microsoft-standard-WSL2 (oe-user@oe-host) (x86_64-msft-linux-gcc (GCC) 9.3.0, GNU ld (GNU Binutils) 2.34.0.20200220) #1 SMP Fri Apr 2 22:23:49 UTC 2021
+2022-09-18T20:33:35Z [1] INFO [25362] {memory} Available physical memory: 7931944960 bytes, available cores: 8
+2022-09-18T20:33:35Z [1] WARNING [118b0] {memory} maximum number of memory mappings per process is 65530, which seems too low. it is recommended to set it to at least 512000
+2022-09-18T20:33:35Z [1] WARNING [49528] {memory} execute 'sudo sysctl -w "vm.max_map_count=512000"'
+2022-09-18T20:33:35Z [1] WARNING [e8b68] {memory} /sys/kernel/mm/transparent_hugepage/enabled is set to 'always'. It is recommended to set it to a value of 'never' or 'madvise'
+2022-09-18T20:33:35Z [1] WARNING [f3108] {memory} execute 'sudo bash -c "echo madvise > /sys/kernel/mm/transparent_hugepage/enabled"'
+2022-09-18T20:33:35Z [1] INFO [144fe] {general} using storage engine 'rocksdb'
+2022-09-18T20:33:35Z [1] INFO [3bb7d] {cluster} Starting up with role SINGLE
+2022-09-18T20:33:35Z [1] INFO [f6e0e] {aql} memory limit per AQL query automatically set to 4759166976 bytes. to modify this value, please adjust the startup option `--query.memory-limit`
+2022-09-18T20:33:35Z [1] INFO [a1c60] {syscall} file-descriptors (nofiles) hard limit is 1048576, soft limit is 1048576
+2022-09-18T20:33:35Z [1] WARNING [ad4b2] {general} found existing lockfile '/var/lib/arangodb3/LOCK' of previous process with pid 1, and that process seems to be still running
+2022-09-18T20:33:36Z [1] INFO [fe333] {engines} RocksDB recovery starting, scanning WAL starting from sequence number 27042589
+2022-09-18T20:33:36Z [1] INFO [a4ec8] {engines} RocksDB recovery finished, WAL entries scanned: 17, max tick found in WAL: 209053, last HLC value: 1744249784328257536
+2022-09-18T20:33:36Z [1] INFO [c1b63] {arangosearch} ArangoSearch maintenance: [1..1] commit thread(s), [1..1] consolidation thread(s)
+2022-09-18T20:33:37Z [1] INFO [6ea38] {general} using endpoint 'http+tcp://0.0.0.0:8529' for non-encrypted requests
+2022-09-18T20:33:37Z [1] INFO [cf3f4] {general} ArangoDB (version 3.9.0 [linux]) is ready for business. Have fun!
+2022-09-18T20:35:11Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/linear_dataset_tests' for database 'linear_dataset_tests'
+2022-09-18T20:35:11Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/linear_dataset_tests_garden' for database 'linear_dataset_tests_garden'
+2022-09-18T20:35:12Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/andrew_test_database' for database 'andrew_test_database'
+2022-09-18T20:35:28Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/load_performance_tests' for database 'load_performance_tests'
+2022-09-21T00:05:32Z [1] WARNING [3ad54] {engines} slow background settings sync: 91106.035589 s
+2022-09-23T21:23:41Z [1] WARNING [3ad54] {engines} slow background settings sync: 166001.823209 s
+2022-09-24T18:08:48Z [1] INFO [e52b0] {general} ArangoDB 3.9.0 [linux] 64bit, using jemalloc, build tags/v3.9.0-0-g8561584e6d5, VPack 0.1.35, RocksDB 6.27.0, ICU 64.2, V8 7.9.317, OpenSSL 1.1.1m  14 Dec 2021
+2022-09-24T18:08:48Z [1] INFO [75ddc] {general} detected operating system: Linux version 5.10.16.3-microsoft-standard-WSL2 (oe-user@oe-host) (x86_64-msft-linux-gcc (GCC) 9.3.0, GNU ld (GNU Binutils) 2.34.0.20200220) #1 SMP Fri Apr 2 22:23:49 UTC 2021
+2022-09-24T18:08:48Z [1] INFO [25362] {memory} Available physical memory: 7931944960 bytes, available cores: 8
+2022-09-24T18:08:48Z [1] WARNING [118b0] {memory} maximum number of memory mappings per process is 65530, which seems too low. it is recommended to set it to at least 512000
+2022-09-24T18:08:48Z [1] WARNING [49528] {memory} execute 'sudo sysctl -w "vm.max_map_count=512000"'
+2022-09-24T18:08:48Z [1] WARNING [e8b68] {memory} /sys/kernel/mm/transparent_hugepage/enabled is set to 'always'. It is recommended to set it to a value of 'never' or 'madvise'
+2022-09-24T18:08:48Z [1] WARNING [f3108] {memory} execute 'sudo bash -c "echo madvise > /sys/kernel/mm/transparent_hugepage/enabled"'
+2022-09-24T18:08:48Z [1] INFO [144fe] {general} using storage engine 'rocksdb'
+2022-09-24T18:08:48Z [1] INFO [3bb7d] {cluster} Starting up with role SINGLE
+2022-09-24T18:08:48Z [1] INFO [f6e0e] {aql} memory limit per AQL query automatically set to 4759166976 bytes. to modify this value, please adjust the startup option `--query.memory-limit`
+2022-09-24T18:08:48Z [1] INFO [a1c60] {syscall} file-descriptors (nofiles) hard limit is 1048576, soft limit is 1048576
+2022-09-24T18:08:48Z [1] WARNING [ad4b2] {general} found existing lockfile '/var/lib/arangodb3/LOCK' of previous process with pid 1, and that process seems to be still running
+2022-09-24T18:08:48Z [1] INFO [fe333] {engines} RocksDB recovery starting, scanning WAL starting from sequence number 44425397
+2022-09-24T18:08:48Z [1] INFO [a4ec8] {engines} RocksDB recovery finished, WAL entries scanned: 8, max tick found in WAL: 336665, last HLC value: 1744803635659800576
+2022-09-24T18:08:49Z [1] INFO [c1b63] {arangosearch} ArangoSearch maintenance: [1..1] commit thread(s), [1..1] consolidation thread(s)
+2022-09-24T18:08:49Z [1] INFO [6ea38] {general} using endpoint 'http+tcp://0.0.0.0:8529' for non-encrypted requests
+2022-09-24T18:08:49Z [1] INFO [cf3f4] {general} ArangoDB (version 3.9.0 [linux]) is ready for business. Have fun!
+2022-09-24T18:10:08Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/examples_test_database_garden' for database 'examples_test_database_garden'
+2022-09-24T18:10:08Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/examples_test_database' for database 'examples_test_database'
+2022-09-25T23:08:03Z [1] INFO [e52b0] {general} ArangoDB 3.9.0 [linux] 64bit, using jemalloc, build tags/v3.9.0-0-g8561584e6d5, VPack 0.1.35, RocksDB 6.27.0, ICU 64.2, V8 7.9.317, OpenSSL 1.1.1m  14 Dec 2021
+2022-09-25T23:08:03Z [1] INFO [75ddc] {general} detected operating system: Linux version 5.10.16.3-microsoft-standard-WSL2 (oe-user@oe-host) (x86_64-msft-linux-gcc (GCC) 9.3.0, GNU ld (GNU Binutils) 2.34.0.20200220) #1 SMP Fri Apr 2 22:23:49 UTC 2021
+2022-09-25T23:08:03Z [1] INFO [25362] {memory} Available physical memory: 7931944960 bytes, available cores: 8
+2022-09-25T23:08:03Z [1] WARNING [118b0] {memory} maximum number of memory mappings per process is 65530, which seems too low. it is recommended to set it to at least 512000
+2022-09-25T23:08:03Z [1] WARNING [49528] {memory} execute 'sudo sysctl -w "vm.max_map_count=512000"'
+2022-09-25T23:08:03Z [1] WARNING [e8b68] {memory} /sys/kernel/mm/transparent_hugepage/enabled is set to 'always'. It is recommended to set it to a value of 'never' or 'madvise'
+2022-09-25T23:08:03Z [1] WARNING [f3108] {memory} execute 'sudo bash -c "echo madvise > /sys/kernel/mm/transparent_hugepage/enabled"'
+2022-09-25T23:08:03Z [1] INFO [144fe] {general} using storage engine 'rocksdb'
+2022-09-25T23:08:03Z [1] INFO [3bb7d] {cluster} Starting up with role SINGLE
+2022-09-25T23:08:03Z [1] INFO [f6e0e] {aql} memory limit per AQL query automatically set to 4759166976 bytes. to modify this value, please adjust the startup option `--query.memory-limit`
+2022-09-25T23:08:03Z [1] INFO [a1c60] {syscall} file-descriptors (nofiles) hard limit is 1048576, soft limit is 1048576
+2022-09-25T23:08:04Z [1] INFO [fe333] {engines} RocksDB recovery starting, scanning WAL starting from sequence number 46209777
+2022-09-25T23:08:04Z [1] INFO [a4ec8] {engines} RocksDB recovery finished, WAL entries scanned: 923, max tick found in WAL: 358775, last HLC value: 1744876717695041537
+2022-09-25T23:08:04Z [1] INFO [c1b63] {arangosearch} ArangoSearch maintenance: [1..1] commit thread(s), [1..1] consolidation thread(s)
+2022-09-25T23:08:04Z [1] INFO [6ea38] {general} using endpoint 'http+tcp://0.0.0.0:8529' for non-encrypted requests
+2022-09-25T23:08:05Z [1] INFO [cf3f4] {general} ArangoDB (version 3.9.0 [linux]) is ready for business. Have fun!
+2022-09-25T23:08:41Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/examples_test_database_garden' for database 'examples_test_database_garden'
+2022-09-25T23:08:41Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/examples_test_database' for database 'examples_test_database'
+2022-09-25T23:35:06Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/linear_dataset_tests' for database 'linear_dataset_tests'
+2022-09-25T23:35:06Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/linear_dataset_tests_garden' for database 'linear_dataset_tests_garden'
+2022-09-25T23:35:07Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/andrew_test_database_garden' for database 'andrew_test_database_garden'
+2022-09-25T23:35:07Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/andrew_test_database' for database 'andrew_test_database'
+2022-09-25T23:35:26Z [1] INFO [56fc7] {general} forcefully removing existing application directory '/var/lib/arangodb3-apps/_db/load_performance_tests' for database 'load_performance_tests'

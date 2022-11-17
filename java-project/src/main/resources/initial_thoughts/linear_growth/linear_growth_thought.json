@@ -1,0 +1,344 @@
+[
+
+{
+  "properties" : {
+    "symbol" : "",
+    "distance" : 465,
+    "targetProperty" : "dayClose",
+    "resultClass" : "Float",
+    "__type" : "goal",
+    "startDate" : 0,
+    "startType" : "date",
+	"desc" : "Predict future $targetProperty value for $symbol at time $distance from $startDate."
+  },
+  "type" : "goal",
+  "_id" : "goal/predictFutureValue",
+  "_key" : "predictFutureValue"
+},
+
+{
+  "properties" : {
+    "name" : "LGT_t1",
+    "__type" : "thought",
+	"desc" : "Assume linear change over time.",
+	"seedThought" : true
+  },
+  "type" : "thought",
+  "_id" : "thought/LGT_t1",
+  "_key" : "LGT_t1"
+},
+
+{
+  "properties" : {
+    "__left_collection" : "goal",
+    "__type" : "approach",
+    "__right_collection" : "thought",
+    "name" : "LGT_a1",
+    "thought_key" : "LGT_t1"
+  },
+  "rightType" : "thought",
+  "leftType" : "goal",
+  "type" : "approach",
+  "_id" : "approach/LGT_a1",
+  "_key" : "LGT_a1",
+  "_from" : "goal/predictFutureValue",
+  "_to" : "thought/LGT_t1"
+},
+
+{
+  "properties" : {
+    "__type" : "thought_operation",
+    "name" : "LGT_to1",
+    "operationName" : "getSymbolDateRel",
+    "thought_key" : "LGT_t1",
+	"desc" : "object at start date"
+  },
+  "type" : "thought_operation",
+  "_id" : "thought_operation/LGT_to1",
+  "_key" : "LGT_to1"
+},
+
+{
+  "properties" : {
+    "__type" : "thought_operation",
+    "name" : "LGT_to2",
+    "operationName" : "subtract",
+    "thought_key" : "LGT_t1",
+	"desc" : "get date in past"
+  },
+  "type" : "thought_operation",
+  "_id" : "thought_operation/LGT_to2",
+  "_key" : "LGT_to2"
+},
+
+{
+  "properties" : {
+    "__type" : "thought_operation",
+    "name" : "LGT_to3",
+    "operationName" : "getSymbolDateRel",
+    "thought_key" : "LGT_t1",
+	"desc" : "get object at past date"
+  },
+  "type" : "thought_operation",
+  "_id" : "thought_operation/LGT_to3",
+  "_key" : "LGT_to3"
+},
+
+{
+  "properties" : {
+    "__type" : "thought_operation",
+    "name" : "LGT_to6",
+    "operationName" : "subtract",
+    "thought_key" : "LGT_t1",
+	"desc" : "get change from past"
+  },
+  "type" : "thought_operation",
+  "_id" : "thought_operation/LGT_to6",
+  "_key" : "LGT_to6"
+},
+
+{
+  "properties" : {
+    "__type" : "thought_operation",
+    "name" : "LGT_to7",
+    "operationName" : "add",
+    "thought_key" : "LGT_t1",
+	"desc" : "get future value"
+  },
+  "type" : "thought_operation",
+  "_id" : "thought_operation/LGT_to7",
+  "_key" : "LGT_to7"
+},
+
+{
+  "properties" : {
+    "__type" : "thought_result",
+    "name" : "LGT_tr1",
+    "operationName" : "end",
+    "thought_key" : "LGT_t1",
+	"desc" : "output as RESULT"
+  },
+  "type" : "thought_result",
+  "_id" : "thought_result/LGT_tr1",
+  "_key" : "LGT_tr1"
+},
+
+{
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "LGT_t1",
+    "output" : "floatB",
+    "input" : "GOAL.distance",
+    "__left_collection" : "thought",
+    "__type" : "thought_sequence",
+    "mutation_range" : "Integer:>0",
+    "name" : "LGT_ts1"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/LGT_ts1",
+  "_key" : "LGT_ts1",
+  "_from" : "thought/LGT_t1",
+  "_to" : "thought_operation/LGT_to2"
+},
+
+{
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "LGT_t1",
+    "output" : "floatA",
+    "input" : "GOAL.startDate",
+    "__left_collection" : "thought_operation",
+    "__type" : "thought_sequence",
+    "name" : "LGT_ts2"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/LGT_ts2",
+  "_key" : "LGT_ts2",
+  "_from" : "thought/LGT_t1",
+  "_to" : "thought_operation/LGT_to2"
+},
+
+{
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "LGT_t1",
+    "output" : "symbol",
+    "input" : "GOAL.symbol",
+    "__left_collection" : "thought",
+    "__type" : "thought_sequence",
+    "name" : "LGT_ts3"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/LGT_ts3",
+  "_key" : "LGT_ts3",
+  "_from" : "thought/LGT_t1",
+  "_to" : "thought_operation/LGT_to3"
+},
+
+{
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "LGT_t1",
+    "output" : "symbol",
+    "input" : "GOAL.symbol",
+    "__left_collection" : "thought",
+    "__type" : "thought_sequence",
+    "name" : "LGT_ts4"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/LGT_ts4",
+  "_key" : "LGT_ts4",
+  "_from" : "thought/LGT_t1",
+  "_to" : "thought_operation/LGT_to1"
+},
+
+{
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "LGT_t1",
+    "output" : "dateNumber",
+    "input" : "GOAL.startDate",
+    "__left_collection" : "thought",
+    "__type" : "thought_sequence",
+    "mutation_range" : "Integer:<0",
+    "name" : "LGT_ts5"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/LGT_ts5",
+  "_key" : "LGT_ts5",
+  "_from" : "thought/LGT_t1",
+  "_to" : "thought_operation/LGT_to1"
+},
+
+{
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "LGT_t1",
+    "output" : "dateNumber",
+    "input" : "RESULT",
+    "__left_collection" : "thought_operation",
+    "__type" : "thought_sequence",
+    "name" : "LGT_ts6"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought_operation",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/LGT_ts6",
+  "_key" : "LGT_ts6",
+  "_from" : "thought_operation/LGT_to2",
+  "_to" : "thought_operation/LGT_to3"
+},
+
+{
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "LGT_t1",
+    "output" : "floatB",
+    "input" : "RESULT",
+    "__left_collection" : "thought_operation",
+    "__type" : "thought_sequence",
+    "mutation_range" : "FLOAT:any",
+    "name" : "LGT_ts9"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought_operation",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/LGT_ts9",
+  "_key" : "LGT_ts9",
+  "_from" : "thought_operation/LGT_to3",
+  "_to" : "thought_operation/LGT_to6"
+},
+
+{
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "LGT_t1",
+    "output" : "floatA",
+    "input" : "RESULT",
+    "__left_collection" : "thought_operation",
+    "__type" : "thought_sequence",
+    "mutation_range" : "FLOAT:any",
+    "name" : "LGT_ts10"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought_operation",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/LGT_ts10",
+  "_key" : "LGT_ts10",
+  "_from" : "thought_operation/LGT_to1",
+  "_to" : "thought_operation/LGT_to6"
+},
+
+{
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "LGT_t1",
+    "output" : "floatB",
+    "input" : "RESULT",
+    "__left_collection" : "thought_operation",
+    "__type" : "thought_sequence",
+    "mutation_range" : "FLOAT:any",
+    "name" : "LGT_ts11"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought_operation",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/LGT_ts11",
+  "_key" : "LGT_ts11",
+  "_from" : "thought_operation/LGT_to1",
+  "_to" : "thought_operation/LGT_to7"
+},
+
+{
+  "properties" : {
+    "__right_collection" : "thought_operation",
+    "thought_key" : "LGT_t1",
+    "output" : "floatA",
+    "input" : "RESULT",
+    "__left_collection" : "thought_operation",
+    "__type" : "thought_sequence",
+    "mutation_range" : "FLOAT:any",
+    "name" : "LGT_ts12"
+  },
+  "rightType" : "thought_operation",
+  "leftType" : "thought_operation",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/LGT_ts12",
+  "_key" : "LGT_ts12",
+  "_from" : "thought_operation/LGT_to6",
+  "_to" : "thought_operation/LGT_to7"
+},
+
+{
+  "properties" : {
+    "__right_collection" : "thought_result",
+    "thought_key" : "LGT_t1",
+    "output" : "output",
+    "input" : "RESULT",
+    "__left_collection" : "thought_operation",
+    "__type" : "thought_sequence",
+    "mutation_range" : "FLOAT:any",
+    "name" : "LGT_ts13"
+  },
+  "rightType" : "thought_result",
+  "leftType" : "thought_operation",
+  "type" : "thought_sequence",
+  "_id" : "thought_sequence/LGT_ts13",
+  "_key" : "LGT_ts13",
+  "_from" : "thought_operation/LGT_to7",
+  "_to" : "thought_result/LGT_tr1"
+}
+
+]
+
+

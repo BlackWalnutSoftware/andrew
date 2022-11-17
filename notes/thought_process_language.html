@@ -1,0 +1,23 @@
+<h1>design choices for Andrew's thought processing language</h1>
+<h2>background/introduction</h2>
+
+For a language that can be mutated, should Andrew go with a text-based language or with a block-based language.  To help address this, the following initial example was generated.
+<p/>
+Initial example:  Given a distance to a goal from a starting point, traverse in the opposite direction the same distance diff the current target attribute value with the past value, and forcast a linear relationship.
+
+<h2>possible approaches</h2>
+
+<h3>code-based representation of initial example</h3>
+forcastValue = (2 * Node($startNode).getNumberAttr($targetAttr)) - (traverse($startNode, $relname, $direction, $distance).getNumberAttr($targetAttr))
+
+<h3>block-based representation of initial example</h3>
+
+<img src="./thought_process_language/initial_example.jpg" alt="graphical representation">
+<p/>
+[Note: Source of graphic is <a href="https://app.diagrams.net/?mode=google&gfw=1#G1yHheWAigkm8GaCBHv3vERHQR-btmRYn_">here</a>.]
+
+<h2>conclusions</h2>
+Given a choice of representation, choice was made to be a code-block based language over an ANTLR type language.
+
+
+

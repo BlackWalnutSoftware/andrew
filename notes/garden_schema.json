@@ -1,0 +1,41 @@
+{
+	"node_types" :[
+
+		{"name": "goal",
+			"attributes" :[
+				{"name": "relationType"},
+				{"name": "direction"},
+				{"name": "distance"},
+				{"name": "targetProperty"},
+				{"name": "resultClass"}
+			]
+		},
+
+		{"name": "thought"},
+
+		{"name": "thought_operation",
+			"attributes" :[
+				{"name": "thought_key"},
+				{"name": "operationName"}
+			]
+		}
+	],
+
+	"edge_types" :[
+		{"name": "thought_sequence",
+			"attributes" :[
+				{"name": "thought_key"},
+				{
+					"name": "input",
+					"description": "the attribute generated from the upstream node"
+				},
+				{
+					"name": "output",
+					"description": "the attribute used in the downstream node"
+				},
+				{"name": "output"}
+			]
+		}
+	]
+}
+

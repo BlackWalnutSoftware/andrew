@@ -1,0 +1,23 @@
+<configuration>
+<!-- see also: https://mkyong.com/logging/logback-xml-example/ -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} - %class{0}.%method:%line - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>c:\\_temp\\andrew.log</file>
+        <append>false</append>
+        <immediateFlush>true</immediateFlush>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} - %class{0}.%method:%line - %msg%n</pattern>
+        </encoder>
+    </appender>
+	
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE"/>
+    </root>
+
+</configuration>

@@ -1,0 +1,259 @@
+##########################################################
+# Release 1.0.0
+##########################################################
+
+* initial write-up document
+  • basic description of "A block-based genetic algorithm time-series forecasting graph processor"
+
+* initialize kgraph and validate connection
+
+* load initial linear test data case
+  • linear ascending values for the nodes in a linear path
+  • nodes and edges contain time values
+  
+* create graphs for both data and for the garden.
+
+* create initial thought
+
+* have goal location represented in graph distance.
+
+* create initial fitness function
+
+* ponder the value of predicting the past ("backcasting")
+
+* create initial garden
+
+* create a thought process (see also: https://github.com/seratch/antlr-maven-example )
+  • identify a good example of what a thought should do (good initial example)
+  • generate initial thought process design (design approach)
+  • add build and test - buildThought()
+  
+* develop sequencing to process a thought - getOperationsByMaxLayer()
+
+* run a thought and measure the result against the goal
+
+* Make a scoring machine and score the thoughts for a goal.
+
+* break the classes into different packages
+
+* offspring generator - clone thought
+
+* offspring generator - make mutations from a clone of a parent thought
+
+* offspring generator - merge two thoughts (crossover)
+
+* offspring generator - merge two merged thoughts
+
+* export a thought to JSON
+
+* export a thought as Dot.
+
+* import a thought from JSON
+
+* load large dataset (the first 3 of the "A" set.)
+
+* profile and speed up
+
+* get datasets
+  - fetch and load the VIX (see: https://en.wikipedia.org/wiki/VIX)
+  - fetch and load the Wilshire 5000 (see: https://en.wikipedia.org/wiki/Wilshire_5000)
+  - fetch and load US GDP
+
+* create "add" operation
+
+* generic forcast method. (Thought.forecast2)
+
+* build seed thought - linear growth (generic but usable for "stock price")
+
+* Operation.getGreatestDateLessThan(...)
+
+* improve performance and test coverage
+  - check for test "forecast2_nullEdgeInput_errorMessage" to produce:
+    "Edge input value is NULL"
+  - 100% test coverage
+  
+* Address vulnerability in org.apache.logging.log4j:log4j-core 2.15.0.
+
+* fix logging to 'debug' for com.blackwalnutsoftware.andrew , default 'warn' for others. 
+
+* Create Evaluator.evaluateThoughts2() and obsolete Evaluator.evaluateThoughts().
+
+* add identification for seed thoughts.
+  - seed thoughts shall be tagged as seedThought==true
+  - mutations shall be tagged as seedThought==false
+  - crossovers shall be tagged as seedThought==false
+  
+* implement train() and get survivng results.
+  - Kick in evolution to discard bad thoughts.
+  - preserve seed thoughts.
+  - good thoughts live on
+  - good thoughts have children
+  - good thoughts produce mutants
+  
+* generate training report
+
+* have report compare seed thought scores to descendant thoughts.
+  Descendants should be better with time. show the slope of:
+  average(non-seeds.score)- average(seeds.score)
+
+* replace startDate & endDate in App.train() with trainingParameters values
+
+* augment report:
+  - guess
+  - actual
+  - trainingCriteria (one per report)
+  - trainingParameters (chosen values per generation)
+  
+* update readme to mention preference for bare metal arango over docker container.
+
+* clean up code and javadoc
+  - strip commented out code ( see: https://stackoverflow.com/a/7677471/2418261 )
+  - add smart javadoc where needed
+  - add smart comments where needed
+  
+* write Andrew Paper (README.md)
+  - add reference to build process
+  - add reference to running the example
+  - review readability (text to speech)
+  
+* set up pro site
+  - buy pro site (blackwalnutsoftware.com)
+  - create private projects in pro site
+  - convert to new namespace
+  - sanitize the code
+  - convert to new Git Repo
+  - check for old namespace references and address
+  - update GitHub Desktop to use new account and name (Snow Elf)
+  - use new email address
+  
+##########################################################
+# WIP
+##########################################################
+
+
+
+##########################################################
+# backlog
+##########################################################
+
+* fix TPS defect. (note: temp fix of dep override in POM is in place)
+  see: https://security.snyk.io/vuln/SNYK-JAVA-COMFASTERXMLJACKSONCORE-3038426
+  - Change a direct dep to a new non-RC version
+  - remove the temp fix
+  
+  
+  - promote v1 of KGraph (private)
+    - set license
+  - promote v1 of Andrew (private)
+    - set license
+    - add paper to site
+  - make projects public
+
+* publish paper to reddit r/
+
+
+* thought modeling: diagram -> test file (json? XML? SysML?) -> kgraph
+  Have a graphical tool for generating thoughts that can be automatically
+  translated into JSON for input into Andrew.
+  - https://www.yworks.com/products/yed ?
+  - https://www.graphity.com/ ?
+
+* make it run faster
+  - change the n^2 loops in Evaluator.evaluateThoughts2 to be parallel threads with a thread pool. (Fast!)
+  - Also adjust the logging to differentiate threads.
+  - change loop in App.train() to be parallel threads with a thread pool.
+  
+* support cluster deployment
+  - clustered DB
+  - RabbitMQ to horizontally scale training
+  - test for n/p performance
+
+* profile and possibly improve memory usage.
+  see: arangodb_warnings.txt
+  then delete that file after the problem is solved.
+  
+* have weaker thoughts mutate more, and show this aids evolution?
+  
+* replace getGoalNode() calls with usage of getGoal() plus Goal.getNode(), and then remove getGoalNode().
+
+* make App.train() smarter:
+  - how many mutants shall be generated?
+  - how shall #mutations be detirmined?
+  - selection of parents for crossover?
+  - number of crossovers to generate?  - see also SimpleCrossover.createCrossovers()
+  - when to die?
+  
+* name mutants based on base - ex: [PID]-[MutationID]_[PPID]
+  note: see Mutator.createMutant()
+  note: what will subsequent generations look like?
+  
+* name crossovers based on parents - ex: [PID]_[PPID])
+  - note: see SimpleCrossover.crossover()
+
+* build seed thought - VIX influences future stock price ("other symbol influence")
+
+* build seed thought - Buffett Indicator detirmines future stock price
+
+* Have thoughts indicate level of certainty (proposed weight)
+  Certainty measurements can evolve over time, and may change based
+  on past accuracy under various conditions.  Certainty can be used
+  by scoring algorithms to help measure outcome score, where a wrong
+  answer with a low certainty can be less punished than a wrong
+  answer with high certainty.
+
+* build evolution example. Given:
+  - history of a stock (linear)
+  - VIX causes push up or down
+  - Buffett Indicator (wilshire 5000/US GDP X 100) causes push up or down
+  - US GDP grows at 8%
+  
+* Show evolution of solution accuracy.
+  - play with future distances
+  - play with sum of fear and greed
+  - play with Buffett Indicator
+
+* support mutation_range in a direction with a limit related to a variable.
+  For example Allow a mutation to change the date input to a value greater
+  than zero but less than GOAL.startDate.
+  
+  
+* get datasets
+  - load the Buffett Indicator (how?)
+  - load all A's
+  - fetch all stock symbols
+  - load all stock symbols
+  - fetch and load Nasdaq 100
+  - fetch and load S&P 500
+  - fetch and load DJIA (what is this?)
+  - fetch and load Russell 2000
+  - Commodies information?
+  - sentiment analysis info?
+  - GDP by industry? (see: https://www.bea.gov/resources/learning-center/what-to-know-gdp)
+
+
+* create initial offspring generator
+  - framework for creating offspring with mutation and crossover
+
+* support genetic operations on offspring generators
+
+
+  
+##########################################################
+# future
+##########################################################
+
+* go through code, identify each for loop, and consider parallel processing it using a reusable thread pool.
+  (limit the total number of threads...)  This is likely to result in multiple work items.
+  
+* speed up unit tests by reducing the number of flushes necessary.
+
+* README content for composition of genetic solution solutions from genetic solutions.
+
+* enhance mutation point indicators in edges - allow code to know ehere and to what extent mutations can be applied.
+
+* have evolution play a role in scoring machines
+  - example: can ((2)X(1 mouth forcast)) be better than ((1)X(2 mouth forcast))?
+
+
+
+  
