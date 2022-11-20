@@ -131,13 +131,25 @@
     - set license
     - add paper to site
 	
-	
+* make projects public
+
 ##########################################################
 # WIP
 ##########################################################
 
+* publish paper to reddit r/genetic_algorithms
+  + create BWS reddit account
+  + confirm r/genetic_algorithms as where to post
+  + draft message
+  - post
+  - gauge response
 
-
+* thought modeling: diagram -> test file (json? XML? SysML?) -> kgraph
+  Have a graphical tool for generating thoughts that can be automatically
+  translated into JSON for input into Andrew.
+  - https://www.yworks.com/products/yed ?
+  - https://www.graphity.com/ ?
+  
 ##########################################################
 # backlog
 ##########################################################
@@ -145,14 +157,9 @@
   
   
 
-* make projects public
 
-* publish paper to reddit r/genetic_algorithms
-  - create BWS reddit account
-  - confirm r/genetic_algorithms as where to post
-  - draft mail
-  - post
-  - gauge response
+
+
 
 
 * thought modeling: diagram -> test file (json? XML? SysML?) -> kgraph
