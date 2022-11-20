@@ -4,7 +4,7 @@
 
 Andrew is like a blend of a genetic algorithm implementation and Scratch programming.
 
-Andrew is a time-series forecasting AI application that uses a genetic algorithm on graphs of code-block-based genes. These graphs are referred to as Thought Graphs.  Thought Graphs are associated with a specific target Goal.  As Andrew runs, the Thoughts are combined and mutated into new thoughts.  Andrew starts with a given set of initial Thoughts, referred to as Seed Thoughts, representing a process for solving a problem.  Seed Thoughts generally model basic ideas, such as linear movement, and correlation.
+Andrew is a time-series forecasting AI application that uses a genetic algorithm on property graphs of code-block-based genes. These graphs are referred to as Thought Graphs.  Thought Graphs are associated with a specific target Goal.  As Andrew runs, the Thoughts are combined and mutated into new thoughts.  Andrew starts with a given set of initial Thoughts, referred to as Seed Thoughts, representing a process for solving a problem.  Seed Thoughts generally model basic ideas, such as linear movement, and correlation.
 
 Andrew was developed out of the desire to make something new and interesting.  Some of the initial ideas for Andrew came from an old version of a lecture from MIT OpenCourseWare 6.034 where little focus was given to Genetic Algorithms and Neural Nets due to a variety of issues.  Later, based on advancements in Neural Nets, those sections were modified to have more focus.  While Neural Nets have now hit the mainstream, Genetic Algorithms seem to have underexplored frontiers.  Andrew looks to investigate some of these less-studied frontiers.
 
