@@ -147,26 +147,18 @@
 * thought modeling: diagram -> test file (json? XML? SysML?) -> kgraph
   Have a graphical tool for generating thoughts that can be automatically
   translated into JSON for input into Andrew.
-  - https://www.yworks.com/products/yed ?
-  - https://www.graphity.com/ ?
+  - use graphML with ports?  Have schema for element types?
+  - use SysML internal block diagrams?
+	- see Modelio? (https://github.com/ModelioOpenSource/Modelio/releases)
+	- see Capella? (https://www.eclipse.org/capella/)
+
   
 ##########################################################
 # backlog
 ##########################################################
 
-  
-  
 
 
-
-
-
-
-* thought modeling: diagram -> test file (json? XML? SysML?) -> kgraph
-  Have a graphical tool for generating thoughts that can be automatically
-  translated into JSON for input into Andrew.
-  - https://www.yworks.com/products/yed ?
-  - https://www.graphity.com/ ?
 
 
 * fix TPS defect. (note: temp fix of dep override in POM is in place)
